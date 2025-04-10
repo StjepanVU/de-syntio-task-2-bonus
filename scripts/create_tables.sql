@@ -24,7 +24,7 @@ CREATE TABLE Dim_Store (
     city VARCHAR(50),
     country_code CHAR(2),
     country_name VARCHAR(50),
-    currency_code CHAR(2)
+    currency_code CHAR(3)
 );
 
 CREATE TABLE Dim_Clerk (
