@@ -3,7 +3,8 @@ Bonus task (SQL Modelling-Data Mart) for Syntio; Data Engineer role application.
 Simple app POC that demonstrates the use of created SQL scripts:
 - Creates SQL tables
 - Populates the data 
-- Runs the sales report in-line with the requirements of the task 2.
+- Runs the sales report in-line with the requirements of the task 2 but with new data models.
+- Runs the monthly revenu report (bonus task)
 
 **Complimentary files** are also included here after the Project Installation Steps.
 
@@ -39,7 +40,7 @@ Simple app POC that demonstrates the use of created SQL scripts:
 6. Report will be executed and generated as .csv file in the ./reports folder
 ---
 ## 📂 2. Complimentary files
-1. SQL script for Create table, Data population and Query are contained in the **./scripts** folder
+1. SQL script for Create table, Data population and Queries are contained in the **./scripts** folder
 2. ER diagram is provided in the project root directory
 
 **create_tables.sql: (with dimension and fact tables):**
