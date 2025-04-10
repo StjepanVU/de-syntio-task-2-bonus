@@ -7,7 +7,7 @@ SELECT
     SUM(fs.total_price) AS "Total Revenue in USD"
 FROM
     Fact_Sales fs
-JOIN Dim_Store ds ON fs.store_id = ds.store_id
+INNER JOIN Dim_Store ds ON fs.store_id = ds.store_id
 WHERE fs.currency_used = 'USD'
 GROUP BY
     ds.store_id,
