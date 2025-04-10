@@ -20,7 +20,7 @@ Simple app POC that demonstrates the use of created SQL scripts:
 2. Enter the project folder:
 
     ```bash
-    cd de-syntio-task-2
+    cd de-syntio-task-2-bonus
     ```
 
 
