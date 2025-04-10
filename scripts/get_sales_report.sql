@@ -16,9 +16,9 @@ SELECT
     fs.currency_used AS "Currency Used"
 FROM
     Fact_Sales fs
-JOIN Dim_Customer dc ON fs.customer_id = dc.customer_id
-JOIN Dim_Product dp ON fs.product_id = dp.product_id
-JOIN Dim_Store ds ON fs.store_id = ds.store_id
-JOIN Dim_Clerk dcl ON fs.clerk_id = dcl.clerk_id
+INNER JOIN Dim_Customer dc ON fs.customer_id = dc.customer_id
+INNER JOIN Dim_Product dp ON fs.product_id = dp.product_id
+INNER JOIN Dim_Store ds ON fs.store_id = ds.store_id
+INNER JOIN Dim_Clerk dcl ON fs.clerk_id = dcl.clerk_id
 WHERE
     fs.currency_used = 'USD';
