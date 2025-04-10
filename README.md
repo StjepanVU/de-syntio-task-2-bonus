@@ -13,7 +13,7 @@ Simple app POC that demonstrates the use of created SQL scripts:
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/StjepanVU/de-syntio-task-2.git
+    git clone https://github.com/StjepanVU/de-syntio-task-2-bonus.git
     ```
 
 
