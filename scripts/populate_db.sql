@@ -1,56 +1,34 @@
-INSERT INTO Country (country_code, country_name, currency_code) VALUES 
-('US', 'United States', 'USD'),
-('CA', 'Canada', 'CAD'),
-('MX', 'Mexico', 'MXN'),
-('FR', 'France', 'EUR'),
-('GR', 'Germany', 'EUR'),
-('JP', 'Japan', 'JPY');
+INSERT INTO Dim_Customer (first_name, last_name)
+VALUES
+('John', 'Doe'),
+('Jane', 'Smith'),
+('Alice', 'Johnson'),
+('Bob', 'Williams');
 
-INSERT INTO Customer (first_name, last_name, email) VALUES 
-('John', 'Doe', 'john.doe@example.com'),
-('Jane', 'Smith', 'jane.smith@example.com'),
-('Alice', 'Johnson', 'alice.johnson@example.com'),
-('Bob', 'Brown', 'bob.brown@example.com'),
-('Charlie', 'Davis', 'charlie.davis@example.com');
-
-INSERT INTO Product (product_name, product_type, country_code) VALUES 
+INSERT INTO Dim_Product (product_name, product_type, country_code)
+VALUES
 ('Laptop', 'Electronics', 'US'),
-('Smartphone', 'Electronics', 'GR'),
-('Tablet', 'Electronics', 'CA'),
-('Headphones', 'Accessories', 'FR'),
-('Camera', 'Electronics', 'JP');
+('Smartphone', 'Electronics', 'CN'),
+('Coffee Maker', 'Home Appliance', 'US'),
+('Tablet', 'Electronics', 'US');
 
-INSERT INTO Store (store_name, city, country_code, email) VALUES 
-('Tech World', 'New York', 'US', 'ny@techworld.com'),
-('Gadget Hub', 'Berlin', 'GR', 'berlin@gadgethub.com'),
-('Maple Tech', 'Toronto', 'CA', 'toronto@mapletech.com'),
-('Paris Electronics', 'Paris', 'FR', 'paris@electronics.com'),
-('Tokyo Gadgets', 'Tokyo', 'JP', 'tokyo@gadgets.com');
+INSERT INTO Dim_Store (store_name, city, country_code, country_name, currency_code)
+VALUES
+('Tech Store', 'New York', 'US', 'United States', 'USD'),
+('Gadget Hub', 'Los Angeles', 'US', 'United States', 'USD'),
+('Home Essentials', 'Chicago', 'US', 'United States', 'USD');
 
-INSERT INTO Store_Product (store_id, product_id, base_price, stock_quantity) VALUES 
-(1, 1, 999, 50),
-(2, 2, 799, 30),
-(3, 3, 499, 20),
-(4, 4, 199, 100),
-(5, 5, 299, 10);
+INSERT INTO Dim_Clerk (first_name, last_name, date_of_birth, country_code)
+VALUES
+('Alice', 'Brown', '1990-04-12', 'US'),
+('Tom', 'Davis', '1985-11-23', 'US'),
+('Emily', 'Martinez', '1992-07-19', 'US');
 
-INSERT INTO Clerk (first_name, last_name, date_of_birth, country_code) VALUES 
-('Emily', 'Clark', '1990-05-15 16:43:39', 'US'),
-('Liam', 'Müller', '1985-08-20 16:43:39', 'GR'),
-('Sophia', 'Brown', '1992-11-10 16:43:39', 'CA'),
-('Lucas', 'Dubois', '1988-03-25 16:43:39', 'FR'),
-('Hiro', 'Tanaka', '1995-07-30 16:43:39', 'JP');
+INSERT INTO Fact_Sales (customer_id, product_id, store_id, clerk_id, quantity_sold, currency_used, conversion_rate, total_price, transaction_time)
+VALUES
+(1, 1, 1, 1, 2, 'USD', 1.0, 1500.00, '2025-04-01 10:00:00'),
+(2, 2, 2, 2, 1, 'USD', 1.0, 800.00, '2025-04-02 11:30:00'),
+(3, 3, 3, 3, 3, 'USD', 1.0, 120.00, '2025-04-03 14:00:00'),
+(4, 4, 1, 1, 2, 'USD', 1.0, 600.00, '2025-04-04 09:00:00'),
+(1, 3, 2, 2, 1, 'USD', 1.0, 120.00, '2025-04-05 16:45:00');
 
-INSERT INTO Clerk_Store (clerk_id, store_id) VALUES 
-(1, 1),
-(2, 2),
-(3, 3),
-(4, 4),
-(5, 5);
-
-INSERT INTO Sale (customer_id, store_product_id, clerk_store_id, quantity_sold, currency_used, conversion_rate, total_price) VALUES 
-(1, 1, 1, 2, 'JPY', 1.00000, 1999.98),
-(2, 2, 2, 3, 'USD', 1.00000, 2399.97),
-(3, 3, 3, 4,'EUR' ,1.00000 ,1999.96 ),
-(4 ,4 ,4 ,5,'USD' ,1.00000 ,799.95 ),
-(5 ,5 ,5 ,1 ,'EUR' ,1.00000 ,299 );
