@@ -1,0 +1,8 @@
+services:
+  db-query-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./reports:/app/reports
+    restart: "no"
